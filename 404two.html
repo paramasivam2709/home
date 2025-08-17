@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>404 Not Found | Stackly Portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background: linear-gradient(rgba(25,25,25,0.9), rgba(25,25,25,0.9)), url('image/hero-bg.jpg');
+      background-repeat: no-repeat;
+      background-position: 50% 25%;
+      background-attachment: fixed;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .floating-card {
+      backdrop-filter: blur(9px);
+      background: rgba(32,32,32,0.38);
+      border-radius: 18px;
+      border: 1.5px solid rgba(255,255,255,0.20);
+      padding: 2.5rem 2.5rem 2rem 2.5rem;
+      max-width: 500px;
+      box-shadow: 0 8px 32px rgba(31,38,135,0.26);
+      text-align: center;
+      /* Animation */
+      opacity: 0;
+      transform: scale(0.8);
+      animation: bounceIn404 1.1s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+    }
+    @keyframes bounceIn404 {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      60% {
+        opacity: 1;
+        transform: scale(1.08);
+      }
+      80% {
+        transform: scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .error-code {
+      font-size: 5rem;
+      font-weight: 900;
+      color: rgba(157, 109, 202, 0.8);
+      margin-bottom: 1rem;
+      /* Animation */
+      animation: pulse404 2s infinite;
+    }
+    @keyframes pulse404 {
+      0%, 100% { text-shadow: 0 0 0px #a4ff9f; }
+      50% { text-shadow: 0 0 24px #a4ff9f; }
+    }
+    .error-message {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeIn404 1.2s 0.7s forwards;
+    }
+    @keyframes fadeIn404 {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .home-link {
+      display: inline-block;
+      margin-top: 1rem;
+      background: rgba(223, 216, 216, 0.08);
+      color: rgba(157, 109, 202, 0.8);
+      font-weight: bold;
+      border: none;
+      border-radius: 7px;
+      padding: 0.7rem 1.7rem;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(255,204,41,0.15);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      opacity: 0;
+      animation: fadeIn404 1.2s 1.2s forwards;
+    }
+    .home-link:hover {
+      background: rgba(157, 109, 202, 0.8);
+      color: #212121;
+      transform: scale(1.07);
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-card">
+    <div class="error-code">404</div>
+    <div class="error-message">Oops! The page you are looking for Under Develaping.</div>
+    <a class="home-link" href="home2.html">Go to Home</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>stackly  Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Responsive Navbar Styles */
+    .navbar {
+      position: relative;
+    }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .nav-toggle span {
+      height: 4px;
+      width: 28px;
+      background: #a4ff9f;
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+      display: block;
+    }
+    @media (max-width: 900px) {
+      .container {
+        padding: 20px 15px;
+      }
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 26, 43, 0.98);
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 8px 32px rgba(31,38,135,0.18);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s cubic-bezier(.68,-0.55,.27,1.55);
+        z-index: 1000;
+      }
+      .nav-links.open {
+        max-height: 500px;
+        padding: 10px 0 15px 0;
+      }
+      .nav-links li {
+        margin: 0;
+        padding: 12px 24px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+      }
+      .nav-links li:last-child {
+        border-bottom: none;
+      }
+      .nav-toggle {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+    }
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 1.2rem;
+      }
+      .hero-content {
+        padding-top: 30px;
+      }
+      .nav-links li {
+        padding: 10px 16px;
+        font-size: 1rem;
+      }
+    }
+    /* Hamburger animation */
+    .nav-toggle.active span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .nav-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-toggle.active span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+    <nav class="navbar">
+      <div class="logo">Stackly</div>
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home2.html">Home</a></li>
+        <li><a href="404.html">About Us</a></li>
+        <li><a href="404.html">Services</a></li>
+        <li><a href="404.html">Blog</a></li>
+        <li><a href="404.html">Pages</a></li>
+        <li><a href="404.html">Contact Us</a></li>
+        <li><a href="404.html" class="btn">Download CV</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <div class="text">
+        <p class="subtitle">Your Vision, My Design Expertise</p>
+        <h1>I'm <span class="highlight">divya</span>,<br>Web Develaper<br>based in USA</h1>
+        <p class="description">
+          Hi, I'm Divya, a passionate Web Develaper based in the USA. I specialize in crafting intuitive, user-centered designs that merge functionality with aesthetics.
+        </p>
+        <div class="buttons">
+          <a href="#" class="btn">Get Started</a>
+          <a href="#" class="watch-btn">▶ Watch Intro</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="service-scroll" data-text="WEBSITE DESIGN • MOBILE APP DESIGN • WIREFRAME DESIGN • DASHBOARD DESIGN • PRODUCT UX  WEBSITE DESIGN • MOBILE APP DESIGN • WIREFRAME DESIGN • DASHBOARD DESIGN • PRODUCT UX">
+</div>
+  </header>
+  <script>
+    // Responsive Navbar Toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', function() {
+      navLinks.classList.toggle('open');
+      navToggle.classList.toggle('active');
+    });
+    navToggle.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        navLinks.classList.toggle('open');
+        navToggle.classList.toggle('active');
+      }
+    });
+    // Close menu on link click (mobile)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 900) {
+          navLinks.classList.remove('open');
+          navToggle.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
