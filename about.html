@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* About Section */
+    .about-section {
+      text-align: center;
+      padding: 20px 20px;
+      background: #0f1a2b;
+      color: #fff;
+      animation: fadeIn 1.5s ease-in ;
+    }
+    .about-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #a4ff9f;
+      animation: slideDown 1s ease-out forwards;
+    }
+    .about-section p.breadcrumb {
+      font-size: 0.9rem;
+      color: #bbb;
+      margin-bottom: 40px;
+      animation: fadeInText 1.2s ease-in-out forwards;
+    }
+    .about-services {
+      background: linear-gradient(90deg, #a4ff9f, #e6ff74);
+      padding: 12px;
+      font-weight: bold;
+      margin-bottom: 50px;
+      color: #000;
+      animation: marquee 20s linear infinite;
+      white-space: nowrap;
+    }
+
+    /* Profile */
+    .profile-pic {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 6px solid #a4ff9f;
+      margin: 0 auto 20px auto;
+      display: block;
+      object-fit: cover;
+      opacity: 0;
+      transform: scale(0.7);
+      animation: bounceIn 1.2s forwards 0.5s;
+    }
+
+    /* Content */
+    .about-content {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+      animation: slideUp 1.2s ease-out forwards;
+    }
+    .about-content h2 {
+      font-size: 1.8rem;
+      margin: 20px 0 10px;
+    }
+    .about-content h2 span {
+      color: #a4ff9f;
+    }
+    .about-content p {
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      animation: fadeInText 1.5s ease forwards;
+    }
+
+    /* Info Boxes */
+    .about-info {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    .about-info div {
+      text-align: center;
+      padding: 15px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 15px rgba(164, 255, 159, 0.2);
+      transition: transform 0.3s;
+      animation: floatUp 3s ease-in-out infinite;
+    }
+    .about-info div:hover {
+      transform: scale(1.05);
+    }
+    .about-info a {
+      color: #a4ff9f;
+      text-decoration: none;
+    }
+    .experience {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #a4ff9f;
+    }
+
+    /* Button */
+    .btn-resume {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      background: linear-gradient(90deg, #a3ff9b, #e6ff74);
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      animation: pulse 2s infinite, gradientBorder 3s infinite;
+    }
+
+    /* Animations */
+    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+    @keyframes slideDown { 0% {transform: translateY(-30px); opacity: 0;} 100% {transform: translateY(0); opacity: 1;} }
+    @keyframes slideUp { 0% {transform: translateY(30px); opacity: 0;} 100% {transform: translateY(0); opacity: 1;} }
+    @keyframes fadeInText { 0% {opacity: 0; transform: translateY(20px);} 100% {opacity: 1; transform: translateY(0);} }
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      80% { transform: scale(0.95); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.5); }
+      50% { box-shadow: 0 0 15px 8px rgba(255,255,255,0); }
+    }
+    @keyframes gradientBorder {
+      0% { box-shadow: 0 0 0 0 #a4ff9f, 0 0 0 0 #61379c;}
+      50% { box-shadow: 0 0 16px 4px #a4ff9f, 0 0 32px 8px #61379c;}
+      100% { box-shadow: 0 0 0 0 #a4ff9f, 0 0 0 0 #61379c;}
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-content h2 { font-size: 1.5rem; }
+      .profile-pic { width: 180px; height: 180px; }
+      .about-info { gap: 20px; }
+    }
+    @media (max-width: 480px) {
+      .about-section { padding: 50px 15px; }
+      .about-section h1 { font-size: 2rem; }
+      .about-content p { font-size: 0.95rem; }
+      .about-info { flex-direction: column; }
+    }
+    /* Add this to your <style> in about.html for grid line animation */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(164,255,159,0.07) 0px,
+      rgba(164,255,159,0.07) 1px,
+      transparent 1px,
+      transparent 80px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(164,255,159,0.07) 0px,
+      rgba(164,255,159,0.07) 1px,
+      transparent 1px,
+      transparent 80px
+    );
+  animation: gridMove 8s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 80px 80px, 80px 80px; }
+}
+  </style>
+</head>
+<body>
+    <header class="container">
+    <nav class="navbar">
+      <div class="logo">Stackly</div>
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home2.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="404.html">Services</a></li>
+        <li><a href="404.html">Blog</a></li>
+        <li><a href="404.html">Pages</a></li>
+        <li><a href="404.html">Contact Us</a></li>
+        <li><a href="404.html" class="btn">Download CV</a></li>
+      </ul>
+    </nav>
+    </header>
+  <section class="about-section">
+    <h1>About <span>Us</span></h1>
+    <p class="breadcrumb">
+  <a href="index.html" style="color:white; ">Home</a> / 
+  <a href=""  style="color: white;">About Us</a>
+</p>
+    
+    
+
+    <img src="image/hero-bg.jpg" alt="Profile" class="profile-pic">
+
+    <div class="about-content">
+      <h2>Who is <span>Divya?</span></h2>
+      <p><i>“Helping businesses grow with creative web design and development solutions.”</i></p>
+      <p>
+        Hi, I'm Divya, a passionate UI/UX designer who thrives on turning ideas into visually 
+        stunning realities. With a love for creativity and a meticulous eye for detail.
+      </p>
+
+      <div class="about-info">
+        <div>
+          <p>Email Us At</p>
+          <a href="mailto:info@domain.com">info@domain.com</a>
+        </div>
+        <div>
+          <p class="experience"><span id="exp-counter">1</span>+</p>
+          <p>Years Experience</p>
+        </div>
+        <div>
+          <p>Phone Number</p>
+          <a href="tel:+0123456789">+0 123 456 789</a>
+        </div>
+      </div>
+
+      <a href="#" class="btn-resume">My Resume</a>
+    </div>
+  </section>
+  <script>
+  // Animated counter for experience years
+  document.addEventListener('DOMContentLoaded', function() {
+    const counter = document.getElementById('exp-counter');
+    let count = 1;
+    const target = 12;
+    const duration = 1900; // ms
+    const step = Math.ceil(duration / target);
+
+    function updateCounter() {
+      if (count <= target) {
+        counter.textContent = count;
+        count++;
+        setTimeout(updateCounter, step);
+      }
+    }
+    updateCounter();
+  });
+</script>
+</body>
+</html>
+
