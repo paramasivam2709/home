@@ -48,9 +48,9 @@ body {
   text-decoration: none;
   font-weight: 500;
   position: relative;
+  transition: color 0.3s;
   overflow-x: auto;
   flex-wrap: wrap;
-  transition: color 0.3s;
 }
 .nav-links a:hover {
   color: #aaffd1;
@@ -241,6 +241,7 @@ h1 {
 }
 
 /* ...existing code... */
+/* ...existing code... */
 
 /* Neon Glow Animation for Logo */
 @keyframes neonGlow {
@@ -338,5 +339,4 @@ h1 {
   animation: scrollGlow 2.5s infinite;
 }
 
-/* ...existing code... */
 /* ...existing code... */
