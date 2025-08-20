@@ -19,6 +19,7 @@ body {
   z-index: 1;
   position: relative;
   animation: fadeIn 2s ease-in;
+  filter: brightness(1.25);
 }
 /* ...existing code... */
 .container {
@@ -123,11 +124,28 @@ h1 {
   animation: pulse 2s infinite;
 }
 .watch-btn {
-  color: #fff;
+  color: #a4ff9f;
   font-weight: bold;
   text-decoration: none;
+  background: rgba(164,255,159,0.08);
+  border-radius: 30px;
+  padding: 10px 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  font-size: 1.08rem;
+  border: 1.5px solid #a4ff9f;
+  box-shadow: 0 2px 8px rgba(164,255,159,0.08);
 }
-
+.watch-btn:hover {
+  background: #a4ff9f;
+  color: #212121;
+  transform: scale(1.07);
+}
+.watch-btn i {
+  font-size: 1.2em;
+}
 .image img {
   width: 350px;
   border-radius: 15px;
