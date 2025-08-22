@@ -9,7 +9,6 @@ body {
   color: #fff;
   overflow-x: hidden;
 }
-/* ...existing code... */
 .hero {
   background: linear-gradient(to right, rgba(15, 26, 43, 0.9), rgba(15, 26, 43, 0.7)),
               url('image/hero-bg.jpg') no-repeat top center/cover;
@@ -21,7 +20,7 @@ body {
   animation: fadeIn 2s ease-in;
   filter: brightness(1.25);
 }
-/* ...existing code... */
+
 .container {
   padding: 20px 50px;
 
@@ -73,6 +72,95 @@ body {
 .nav-links .btn:hover {
   transform: scale(1.05);
 }
+
+/* Responsive Navbar Styles */
+    .navbar {
+      position: relative;
+    }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .nav-toggle span {
+      height: 4px;
+      width: 28px;
+      background: #a4ff9f;
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+      display: block;
+    }
+    @media (max-width: 900px) {
+      .container {
+        padding: 20px 15px;
+      }
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 26, 43, 0.98);
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 8px 32px rgba(31,38,135,0.18);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s cubic-bezier(.68,-0.55,.27,1.55);
+        z-index: 1000;
+      }
+      .nav-links.open {
+        max-height: 500px;
+        padding: 10px 0 15px 0;
+      }
+      .nav-links li {
+        margin: 0;
+        padding: 12px 24px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+      }
+      .nav-links li:last-child {
+        border-bottom: none;
+      }
+      .nav-toggle {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+    }
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 1.2rem;
+      }
+      .hero-content {
+        padding-top: 30px;
+      }
+      .nav-links li {
+        padding: 10px 16px;
+        font-size: 1rem;
+      }
+    }
+    /* Hamburger animation */
+    .nav-toggle.active span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .nav-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-toggle.active span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
 
 .hero-content {
   display: flex;
@@ -353,8 +441,37 @@ h1 {
   50% { box-shadow: 0 0 16px 4px #a4ff9f;}
 }
 .service-scroll {
-  /* ...existing code... */
+ 
   animation: scrollGlow 2.5s infinite;
 }
 
-/* ...existing code... */
+
+/* Add this to your <style> in about.html for grid line animation */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(164,255,159,0.07) 0px,
+      rgba(164,255,159,0.07) 1px,
+      transparent 1px,
+      transparent 80px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(164,255,159,0.07) 0px,
+      rgba(164,255,159,0.07) 1px,
+      transparent 1px,
+      transparent 80px
+    );
+  animation: gridMove 8s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 80px 80px, 80px 80px; }
+}

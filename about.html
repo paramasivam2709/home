@@ -156,36 +156,7 @@
       .about-content p { font-size: 0.95rem; }
       .about-info { flex-direction: column; }
     }
-    /* Add this to your <style> in about.html for grid line animation */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  pointer-events: none;
-  z-index: 0;
-  background:
-    repeating-linear-gradient(
-      to right,
-      rgba(164,255,159,0.07) 0px,
-      rgba(164,255,159,0.07) 1px,
-      transparent 1px,
-      transparent 80px
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      rgba(164,255,159,0.07) 0px,
-      rgba(164,255,159,0.07) 1px,
-      transparent 1px,
-      transparent 80px
-    );
-  animation: gridMove 8s linear infinite;
-}
-
-@keyframes gridMove {
-  0% { background-position: 0 0, 0 0; }
-  100% { background-position: 80px 80px, 80px 80px; }
-}
-  </style>
+      </style>
 </head>
 <body>
     <header class="container">
@@ -244,24 +215,8 @@ body::before {
       <a href="404.html" class="btn-resume">My Resume</a>
     </div>
   </section>
-  <script>
-  // Animated counter for experience years
-  document.addEventListener('DOMContentLoaded', function() {
-    const counter = document.getElementById('exp-counter');
-    let count = 1;
-    const target = 12;
-    const duration = 1900; // ms
-    const step = Math.ceil(duration / target);
-
-    function updateCounter() {
-      if (count <= target) {
-        counter.textContent = count;
-        count++;
-        setTimeout(updateCounter, step);
-      }
-    }
-    updateCounter();
-  });
+  <script src="js/navbar.js"></script>"
+  <script src="js/experienceCounter.js"></script>
 </script>
 </body>
 </html>
