@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     body {
       background: #0f1a2b;
@@ -12,11 +13,12 @@
       font-family: 'Segoe UI', sans-serif;
     }
 
-    /* Contact Section */
+    /* Contact Section start */
     .contact-section {
+      text-align: center;
       max-width: 1000px;
       margin: auto;
-      padding: 80px 20px;
+      padding: 8px 20px;
     }
 
     .contact-section h1 {
@@ -63,6 +65,7 @@
       color: #ddd;
     }
     .contact-item strong {
+      text-align:left;
       display: block;
       color: #fff;
       margin-bottom: 5px;
@@ -135,16 +138,47 @@
         gap: 15px;
       }
       .contact-section h1 { font-size: 2rem; }
-    }
+    } 
+
+   /* Contact Section end */ 
   </style>
   
   
 </head>
 <body>
+
+
+   
+    <!-- header section start -->
+<header class="container">
+    <nav class="navbar">
+      <div class="logo">Stackly</div>
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home2.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="404.html">Pages</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="404.html" class="btn">Download CV</a></li>
+      </ul>
+    </nav>
+    </header>
+    <!-- header section end -->
+  
+  <!-- Contact Section start -->
   <section class="contact-section">
     <!-- Heading -->
     <h1>Contact <span>us</span></h1>
-    <p class="breadcrumb">Home / Contact Us</p>
+    <p class="breadcrumb">
+  <a href="index.html" style="color:white; ">Home</a> / 
+  <a href=""  style="color: white;">contact us</a>
+</p>
 
     
 
@@ -191,5 +225,71 @@
       <button type="submit" class="btn-submit">Submit Message</button>
     </form>
   </section>
+  <!-- Contact Section end -->
+
+    <!-- Footer Section start -->
+  <footer class="footer">
+    <div class="footer-top">
+      <h2>READY TO WORK WITH <span>US?</span></h2>
+      <p>Partner with our design agency for your business with amazing results.</p>
+    </div>
+
+    <div class="footer-content">
+      <!-- Left Logo + Text -->
+      <div class="footer-brand">
+        <h3 class="logo">stackly</h3>
+        <p>
+          Crafting intuitive, user-centric designs that bring ideas to life. 
+          With a passion for innovation and creativity, I help businesses and individuals.
+        </p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-dribbble"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Mobile App Design</a></li>
+          <li><a href="#">UI/UX Design</a></li>
+          <li><a href="#">Branding And Visual Identity</a></li>
+          <li><a href="#">Consultation And Strategy</a></li>
+        </ul>
+      </div>
+
+   
+      <div class="footer-links">
+        <h4>View My Work</h4>
+        <ul>
+          <li><a href="#">Behance</a></li>
+          <li><a href="#">Dribbble</a></li>
+          <li><a href="#">Upwork</a></li>
+          <li><a href="#">Fiverr</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright © 2025 All Rights Reserved.</p>
+    </div>
+  </footer>
+     <!-- footer section end -->
+ 
+  <script src="js/navbar.js"></script>
 </body>
 </html>

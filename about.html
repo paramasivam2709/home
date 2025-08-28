@@ -5,160 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* About Section */
-    .about-section {
-      text-align: center;
-      padding: 20px 20px;
-      background: #0f1a2b;
-      color: #fff;
-      animation: fadeIn 1.5s ease-in ;
-    }
-    .about-section h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #a4ff9f;
-      animation: slideDown 1s ease-out forwards;
-    }
-    .about-section p.breadcrumb {
-      font-size: 0.9rem;
-      color: #bbb;
-      margin-bottom: 40px;
-      animation: fadeInText 1.2s ease-in-out forwards;
-    }
-    .about-services {
-      background: linear-gradient(90deg, #a4ff9f, #e6ff74);
-      padding: 12px;
-      font-weight: bold;
-      margin-bottom: 50px;
-      color: #000;
-      animation: marquee 20s linear infinite;
-      white-space: nowrap;
-    }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    /* Profile */
-    .profile-pic {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      border: 6px solid #a4ff9f;
-      margin: 0 auto 20px auto;
-      display: block;
-      object-fit: cover;
-      opacity: 0;
-      transform: scale(0.7);
-      animation: bounceIn 1.2s forwards 0.5s;
-    }
-
-    /* Content */
-    .about-content {
-      max-width: 700px;
-      margin: auto;
-      text-align: center;
-      animation: slideUp 1.2s ease-out forwards;
-    }
-    .about-content h2 {
-      font-size: 1.8rem;
-      margin: 20px 0 10px;
-    }
-    .about-content h2 span {
-      color: #a4ff9f;
-    }
-    .about-content p {
-      color: #ccc;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      animation: fadeInText 1.5s ease forwards;
-    }
-
-    /* Info Boxes */
-    .about-info {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 30px;
-      flex-wrap: wrap;
-    }
-    .about-info div {
-      text-align: center;
-      padding: 15px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 15px rgba(164, 255, 159, 0.2);
-      transition: transform 0.3s;
-      animation: floatUp 3s ease-in-out infinite;
-    }
-    .about-info div:hover {
-      transform: scale(1.05);
-    }
-    .about-info a {
-      color: #a4ff9f;
-      text-decoration: none;
-    }
-    .experience {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #a4ff9f;
-    }
-
-    /* Button */
-    .btn-resume {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      border-radius: 25px;
-      background: linear-gradient(90deg, #a3ff9b, #e6ff74);
-      color: #000;
-      font-weight: bold;
-      text-decoration: none;
-      animation: pulse 2s infinite, gradientBorder 3s infinite;
-    }
-
-    /* Animations */
-    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-    @keyframes slideDown { 0% {transform: translateY(-30px); opacity: 0;} 100% {transform: translateY(0); opacity: 1;} }
-    @keyframes slideUp { 0% {transform: translateY(30px); opacity: 0;} 100% {transform: translateY(0); opacity: 1;} }
-    @keyframes fadeInText { 0% {opacity: 0; transform: translateY(20px);} 100% {opacity: 1; transform: translateY(0);} }
-    @keyframes bounceIn {
-      0% { transform: scale(0.5); opacity: 0; }
-      60% { transform: scale(1.2); opacity: 1; }
-      80% { transform: scale(0.95); }
-      100% { transform: scale(1); opacity: 1; }
-    }
-    @keyframes floatUp {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
-    }
-    @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.5); }
-      50% { box-shadow: 0 0 15px 8px rgba(255,255,255,0); }
-    }
-    @keyframes gradientBorder {
-      0% { box-shadow: 0 0 0 0 #a4ff9f, 0 0 0 0 #61379c;}
-      50% { box-shadow: 0 0 16px 4px #a4ff9f, 0 0 32px 8px #61379c;}
-      100% { box-shadow: 0 0 0 0 #a4ff9f, 0 0 0 0 #61379c;}
-    }
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .about-content h2 { font-size: 1.5rem; }
-      .profile-pic { width: 180px; height: 180px; }
-      .about-info { gap: 20px; }
-    }
-    @media (max-width: 480px) {
-      .about-section { padding: 50px 15px; }
-      .about-section h1 { font-size: 2rem; }
-      .about-content p { font-size: 0.95rem; }
-      .about-info { flex-direction: column; }
-    }
-      </style>
 </head>
 <body>
+  <!-- navbar start-->
     <header class="container">
     <nav class="navbar">
       <div class="logo">Stackly</div>
@@ -172,12 +23,14 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="service.html">Services</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="404.html">Pages</a></li>
-        <li><a href="404.html">Contact Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
         <li><a href="404.html" class="btn">Download CV</a></li>
       </ul>
     </nav>
     </header>
+  <!-- navbar end-->  
+
+  <!-- About  Section start -->
   <section class="about-section">
     <h1>About <span>Us</span></h1>
     <p class="breadcrumb">
@@ -215,6 +68,72 @@
       <a href="404.html" class="btn-resume">My Resume</a>
     </div>
   </section>
+  <!-- about section end-->
+
+  
+  <!-- Footer Section start -->
+  <footer class="footer">
+    <div class="footer-top">
+      <h2>READY TO WORK WITH <span>US?</span></h2>
+      <p>Partner with our design agency for your business with amazing results.</p>
+    </div>
+
+    <div class="footer-content">
+      <!-- Left Logo + Text -->
+      <div class="footer-brand">
+        <h3 class="logo">stackly</h3>
+        <p>
+          Crafting intuitive, user-centric designs that bring ideas to life. 
+          With a passion for innovation and creativity, I help businesses and individuals.
+        </p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-dribbble"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Mobile App Design</a></li>
+          <li><a href="#">UI/UX Design</a></li>
+          <li><a href="#">Branding And Visual Identity</a></li>
+          <li><a href="#">Consultation And Strategy</a></li>
+        </ul>
+      </div>
+
+   
+      <div class="footer-links">
+        <h4>View My Work</h4>
+        <ul>
+          <li><a href="#">Behance</a></li>
+          <li><a href="#">Dribbble</a></li>
+          <li><a href="#">Upwork</a></li>
+          <li><a href="#">Fiverr</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright © 2025 All Rights Reserved.</p>
+    </div>
+  </footer>
+     <!-- footer section end -->
+
   <script src="js/navbar.js"></script>"
   <script src="js/experienceCounter.js"></script>
 </script>
