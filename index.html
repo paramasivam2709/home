@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>stackly  Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="edu.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
 </head>
 <body>
   <!-- navbar start-->
@@ -24,8 +27,8 @@
         <li><a href="service.html">Services</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="404.html" class="btn">Download CV</a></li>
       </ul>
+     <li style="list-style: none;"><a href="404.html" class="btn">Download CV</a></li>
     </nav>
     <!-- navbar end-->
 
@@ -99,7 +102,7 @@
   <a href=""  style="color: white;">Services</a>
 </p>
 
-    <!-- ...existing code... -->
+    
 <div class="services-grid">
   <div class="service-card">
     <div class="service-title">
@@ -191,7 +194,7 @@
    <!--blog section start-->  
 
   <section class="blog-section scroll-animate.visible">
-    <h1>Latest <span>blog</span></h1>
+    <h1>Latest <span>Blog</span></h1>
     <p class="breadcrumb">
   <a href="index.html" style="color:white; ">Home</a> / 
   <a href=""  style="color: white;">Blog</a>
@@ -253,6 +256,108 @@
   </section>
   <!--blog section end-->
 
+
+  <!-- Education & Work Section start-->
+  <section class="education-work">
+    <h1 style="text-align: center ;"><span class="education">education & work</span></h1>
+
+    <!-- Education -->
+    <div class="card">
+      <h4 ">🎓 Education</h4>
+      <ul>
+        <li><strong>Harmony Institute</strong> - Master in Visual Arts <span>2012-2014</span></li>
+        <li><strong>Aurora Academy</strong> - Bachelor in Visual Arts <span>2008-2012</span></li>
+        <li><strong>Crystalbrook</strong> - High School <span>1996-2008</span></li>
+      </ul>
+    </div>
+
+    <!-- Work -->
+    <div class="card">
+      <h4>💼 Work Experience</h4>
+      <ul>
+        <li><strong>Insightlancer</strong> - Senior Designer <span>2018-2024</span></li>
+        <li><strong>Self-Employed</strong> - Visual Artist <span>2016-2018</span></li>
+        <li><strong>KG Graphics Studio</strong> - Web Designer <span>2014-2016</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Workflow -->
+  <section class="workflow">
+    <h3>the structured workflow behind <span>our success</span></h3>
+    <ol>
+      <li><strong>Discovery And Planning:</strong> We begin by understanding your vision, goals & requirements.</li>
+      <li><strong>Design And Development:</strong> Collaborative creative process to bring designs to life.</li>
+      <li><strong>Delivery And Support:</strong> Ensuring seamless launch and continuous assistance.</li>
+    </ol>
+  </section>
+    <!-- Education & Work Section end-->
+
+   
+  <!-- Custom Plans -->
+  <section class="custom-plans">
+    <div class="custom-box">
+      <h3>Hey ! Custom Plans For Your Unique Needs</h3>
+      <p>If none of my standard packages quite fit what you’re looking for, don’t worry!</p>
+      <a href="#" class="btn">Contact Now</a>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+   <h1 style="text-align: center;"><span> pricing</span></h1>
+  <section class="pricing">
+    <div class="price-card">
+      <h4>Hourly Package</h4>
+      <h2>$29<span>/Hours</span></h2>
+      <ul>
+        <li>Custom Website Design</li>
+        <li>Responsive Design</li>
+        <li>Front-End Development</li>
+        <li>Back-End Development</li>
+        <li>E-Commerce Development</li>
+        <li>Branding & Graphic Design</li>
+      </ul>
+      <a href="#" class="btn">Hire Now</a>
+    </div>
+
+    <div class="price-card popular">
+      <div class="tag">Popular</div>
+      <h4>Monthly Package</h4>
+      <h2>$1229<span>/Month</span></h2>
+      <ul>
+        <li>Custom Website Design</li>
+        <li>Responsive Design</li>
+        <li>Front-End Development</li>
+        <li>Back-End Development</li>
+        <li>E-Commerce Development</li>
+        <li>Branding & Graphic Design</li>
+      </ul>
+      <a href="#" class="btn">Hire Now</a>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews">
+    <h3>See what people are saying <span>about my work</span></h3>
+    <div class="review-box">
+      <p><strong>1000+ Happy Clients</strong><br> Work With People And Brands Worldwide.</p>
+      <div class="client">
+       
+        <p><strong>Jenny Wilson</strong><br> Web Designer</p>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h3>Need more info? here's what <span>you’re looking for</span></h3>
+    <div class="faq-box">
+      <p>You have different questions? Ask Away!<br>Work With People And Brands Worldwide.</p>
+      <a href="#" class="btn">Contact Us Now</a>
+    </div>
+  </section>
 
 
   <!-- Contact Section start -->
@@ -323,7 +428,7 @@
     <div class="footer-content">
       <!-- Left Logo + Text -->
       <div class="footer-brand">
-        <h3 class="logo">stackly</h3>
+        <h3 class="">stackly</h3>
         <p>
           Crafting intuitive, user-centric designs that bring ideas to life. 
           With a passion for innovation and creativity, I help businesses and individuals.
@@ -379,5 +484,13 @@
   <script src="js/navbar.js"></script>
   <script src="js/experienceCounter.js"></script>
   <script src="js/scrol.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true  
+})
+</script>
 </body>
 </html>
