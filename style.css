@@ -42,6 +42,8 @@ body {
   gap: 25px;
   list-style: none;
   align-items: center;
+  overflow-y: auto;
+  flex-wrap: wrap;
 }
 .nav-links a {
   color: #fff;
@@ -67,11 +69,16 @@ body {
   display: inline-block;
   margin: 8px 0;
   text-align: center;
-  transition: transform 0.3s;
+ 
 }
 .nav-links .btn:hover {
-  transform: scale(1.05);
+  transform: none;
+  overflow-x: hidden;
+  flex-wrap: wrap;
 }
+
+
+
 
 /* Responsive Navbar Styles */
     .navbar {
@@ -211,6 +218,8 @@ h1 {
   font-weight: bold;
   color: #000;
   animation: pulse 2s infinite;
+  margin-top: 10px;
+  overflow-x: hidden;
 }
 .watch-btn {
   color: #a4ff9f;
@@ -544,6 +553,7 @@ body::before {
     }
 
     /* Info Boxes */
+    
     .about-info {
       display: flex;
       justify-content: center;
@@ -1329,4 +1339,204 @@ text-align: center;
   .custom-box { font-size: 14px; }
   .price-card h2 { font-size: 20px; }
   .faq-box p { font-size: 14px; }
+}
+
+/* --- Improved Education & Work Section Styles --- */
+.education-work {
+  padding: 60px 20px 40px 20px;
+  background: linear-gradient(120deg, #0f1a2b 80%, #a4ff9f10 100%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 400px;
+}
+
+.education-work h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 2.3rem;
+  color: #a4ff9f;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid #a4ff9f33;
+  box-shadow: 0 4px 24px rgba(164,255,159,0.08);
+  border-radius: 18px;
+  padding: 32px 28px 24px 28px;
+  min-width: 290px;
+  max-width: 400px;
+  flex: 1 1 320px;
+  margin: 0 10px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 1.1s;
+}
+
+.card h4 {
+  font-size: 1.25rem;
+  color: #a4ff9f;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card h4::before {
+  content: attr(data-icon);
+  font-size: 1.3em;
+  margin-right: 8px;
+  color: #e6ff74;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  margin: 14px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.03);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  color: #eafff2;
+  transition: background 0.2s;
+}
+
+.card ul li strong {
+  color: #a4ff9f;
+  font-weight: 600;
+}
+
+.card ul li span {
+  background: #a4ff9f;
+  color: #0f1a2b;
+  padding: 3px 12px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-left: 12px;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(164,255,159,0.18);
+  background: rgba(164,255,159,0.13);
+}
+
+/* Responsive for Education & Work */
+@media (max-width: 900px) {
+  .education-work {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 10px 20px 10px;
+  }
+  .card {
+    max-width: 98vw;
+    min-width: 0;
+    width: 100%;
+    margin: 0 0 18px 0;
+  }
+  .education-work h1 {
+    font-size: 2rem;
+  }
+}
+
+
+.reviews {
+  text-align: center;
+  padding: 60px 20px 40px 20px;
+  background: #0f1a2b;
+  animation: fadeInUp 1.2s ease;
+}
+.reviews h3 {
+  font-size: 2rem;
+  margin-bottom: 36px;
+  color: #a4ff9f;
+}
+.reviews h3 span {
+  color: #e6ff74;
+}
+.review-list {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.review-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(164,255,159,0.08);
+  padding: 32px 28px 24px 28px;
+  max-width: 340px;
+  min-width: 240px;
+  text-align: left;
+  margin: 0 10px 24px 10px;
+  animation: fadeInUp 1.1s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1.5px solid #a4ff9f33;
+  position: relative;
+}
+.review-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(164,255,159,0.18);
+  background: rgba(164,255,159,0.13);
+}
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+.review-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #a4ff9f;
+  box-shadow: 0 2px 8px rgba(164,255,159,0.13);
+}
+.review-role {
+  font-size: 0.98rem;
+  color: #a4ff9f;
+  font-weight: 500;
+}
+.review-stars {
+  color: #ffe066;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+.review-card p {
+  color: #eafff2;
+  font-size: 1.08rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .review-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .review-card {
+    max-width: 98vw;
+    min-width: 0;
+    width: 100%;
+  }
 }
