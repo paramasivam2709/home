@@ -16,7 +16,7 @@
     <div class="container">
     <nav class="navbar">
       <div class="logo"><a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;">
-  <img src="image/Stackly Logo Png.png" alt="Stackly Logo" style="height:48px; width:auto; display:block;">
+  <img src="image/Stackly Logo Png.png" alt="Stackly Logo" class="svg-logo" style="height:48px; width:auto; display:block;">
 </a></div>
       <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation" tabindex="0">
         <span></span>
@@ -24,16 +24,21 @@
         <span></span>
       </div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li style="overflow-x: hidden;"> <a href="contact.html">Contact Us</a></li>
-        
+  <li class="dropdown">
+    <a href="index.html">Home <i class="fas fa-caret-down"></i></a>
+    <ul class="dropdown-menu">
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="service.html">Services</a></li>
+  <li><a href="blog.html">Blog</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+  <li><a href="404.html" class="btn">Download CV</a></li>
+</ul>
     <!-- Hero Content start -->
-      </ul>
       
-      <li style= " list-style: none;"><a href="404.html" class="btn">Download CV</a></li>
+      
       
       </nav>
     <div class="hero-content">
@@ -45,7 +50,7 @@
         </p>
 <div class="buttons">
   <a href="404.html" class="btn">Get Started</a>
-  <a href="404.html" class="watch-btn" target="_blank">
+  <a href="404.html" class="watch-btn" >
     <i class="fas fa-play-circle"></i> Watch Intro
   </a>
 </div>
@@ -290,7 +295,7 @@
     <div class="custom-box">
       <h3>Hey ! Custom Plans For Your Unique Needs</h3>
       <p>If none of my standard packages quite fit what you’re looking for, don’t worry!</p>
-      <a href="#" class="btn">Contact Now</a>
+      <a href="404.html" class="btn">Contact Now</a>
     </div>
   </section>
 
@@ -387,7 +392,7 @@
     <h3>Need more info? here's what <span>you’re looking for</span></h3>
     <div class="faq-box">
       <p>You have different questions? Ask Away!<br>Work With People And Brands Worldwide.</p>
-      <a href="#" class="btn">Contact Us Now</a>
+      <a href="404.html" class="btn">Contact Us Now</a>
     </div>
   </section>
 

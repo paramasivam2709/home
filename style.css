@@ -78,7 +78,67 @@ body {
 }
 
 
+.svg-logo {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(13%) saturate(1170%) hue-rotate(63deg) brightness(104%) contrast(101%);
+}
+/* Dropdown styles */
+.nav-links .dropdown {
+  position: relative;
+}
+.nav-links .dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: rgba(39, 4, 72, 0.98);
+  min-width: 160px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 8px 32px rgba(31,38,135,0.18);
+  z-index: 1001;
+  padding: 0;
+}
+.nav-links .dropdown-menu li {
+  width: 100%;
+  padding: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.nav-links .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+.nav-links .dropdown-menu a {
+  display: block;
+  padding: 12px 24px;
+  color: #fff;
+  background: none;
+  font-size: 1rem;
+  text-align: left;
+  transition: background 0.2s;
+}
+.nav-links .dropdown-menu a:hover {
+  background: #a4ff9f;
+  color: #212121;
+}
+.nav-links .dropdown:hover > .dropdown-menu {
+  display: block;
+}
 
+/* Show dropdown on click for mobile */
+@media (max-width: 900px) {
+  .nav-links .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background: rgba(39, 4, 72, 0.98);
+    min-width: 100%;
+    border-radius: 0;
+  }
+  .nav-links .dropdown.open > .dropdown-menu {
+    display: block;
+  }
+  .nav-links .dropdown > a i {
+    float: right;
+    margin-left: 8px;
+  }
+}
 
 /* Responsive Navbar Styles */
     .navbar {
@@ -158,16 +218,7 @@ body {
         font-size: 1rem;
       }
     }
-    /* Hamburger animation */
-    .nav-toggle.active span:nth-child(1) {
-      transform: translateY(9px) rotate(45deg);
-    }
-    .nav-toggle.active span:nth-child(2) {
-      opacity: 0;
-    }
-    .nav-toggle.active span:nth-child(3) {
-      transform: translateY(-9px) rotate(-45deg);
-    }
+    
 
 .hero-content {
   
@@ -404,19 +455,8 @@ h1 {
 }
 
 /* Animated Underline on nav-links hover */
-.nav-links a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #a4ff9f, #61379c);
-  transition: width 0.4s cubic-bezier(.68,-0.55,.27,1.55);
-  margin-top: 3px;
-  border-radius: 2px;
-}
-.nav-links a:hover::after {
-  width: 100%;
-}
+
+
 
 /* Hero Content Fade-in with Delay */
 .hero-content > .text > * {
