@@ -23,19 +23,22 @@
         <span></span>
         <span></span>
       </div>
-      <ul class="nav-links" id="navLinks">
+     <ul class="nav-links" id="navLinks">
   <li class="dropdown">
     <a href="index.html">Home <i class="fas fa-caret-down"></i></a>
     <ul class="dropdown-menu">
-      <li><a href="index.html">Home</a></li>
+      
+      <li><a href="2home page/index.html">Home Page 1</a></li>
     </ul>
   </li>
   <li><a href="about.html">About Us</a></li>
   <li><a href="service.html">Services</a></li>
   <li><a href="blog.html">Blog</a></li>
-  <li><a href="contact.html">Contact Us</a></li>
-  <li><a href="404.html" class="btn">Download CV</a></li>
+  <li style="overflow: hidden;"><a href="contact.html">Contact Us</a></li>
+   <li style="list-style: none;"><a href="404.html" class="btn">Download CV</a></li>
 </ul>
+     
+    
     <!-- Hero Content start -->
       
       
@@ -313,7 +316,7 @@
         <li>E-Commerce Development</li>
         <li>Branding & Graphic Design</li>
       </ul>
-      <a href="#" class="btn">Hire Now</a>
+      <a href="contact.html" class="btn">Hire Now</a>
     </div>
 
     <div class="price-card popular">
@@ -328,7 +331,7 @@
         <li>E-Commerce Development</li>
         <li>Branding & Graphic Design</li>
       </ul>
-      <a href="#" class="btn">Hire Now</a>
+      <a href="contact.html" class="btn">Hire Now</a>
     </div>
   </section>
 
@@ -449,6 +452,9 @@
       <textarea placeholder="Message" required></textarea>
 
       <br>
+      <div id="form-success" style="display:none; color:#a4ff9f; font-weight:bold; margin-bottom:12px; text-align:center;">
+  Message sent successfully!
+</div>
       <button type="submit" class="btn-submit">Submit Message</button>
     </form>
   </section>
@@ -474,10 +480,10 @@
           With a passion for innovation and creativity, I help businesses and individuals.
         </p>
         <div class="social-icons">
-          <a href="#"><i class="fab fa-dribbble"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="404.html"><i class="fab fa-dribbble"></i></a>
+          <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+          <a href="404.html"><i class="fab fa-instagram"></i></a>
+          <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
 
@@ -524,6 +530,7 @@
   <script src="js/navbar.js"></script>
   <script src="js/experienceCounter.js"></script>
   <script src="js/scrol.js"></script>
+  <script src="js/main.js"> </script>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
@@ -531,6 +538,18 @@
     duration: 1000,
     once: true  
 })
+
+
+  // Dropdown toggle for mobile
+  document.querySelectorAll('.nav-links .dropdown > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('open');
+      }
+    });
+  });
+
 </script>
 </body>
 </html>
