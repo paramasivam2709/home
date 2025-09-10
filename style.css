@@ -1559,3 +1559,116 @@ text-align: center;
     width: 100%;
   }
 }
+
+
+/* -------------------
+   Mobile tweaks: logo, nav toggle, hero background
+   ------------------- */
+
+/* for small tablets & phones */
+@media (max-width: 900px) {
+  /* shrink logo */
+  .logo img {
+    height: 40px; /* smaller logo */
+    max-width: 70%;
+    object-fit: contain;
+  }
+
+  /* ensure nav toggle visible */
+  .nav-toggle {
+    display: flex; /* already set in your CSS, but ensure priority */
+  }
+
+  /* mobile menu base hidden -> controlled by .open class */
+  .nav-links {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(.68,-0.55,.27,1.55), padding 0.25s;
+  }
+  .nav-links.open {
+    max-height: 600px; /* enough to show items */
+    padding: 10px 0 16px;
+  }
+
+  /* make dropdown arrows visible on right */
+  .nav-links .dropdown > a i {
+    float: right;
+  }
+
+  /* touch-friendly nav items */
+  .nav-links li {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  /* hero: reduce padding so content fits smaller view */
+  .hero .container { padding: 14px 18px; }
+  .hero-content { padding-top: 48px; }
+}
+
+/* for very small phones */
+@media (max-width: 480px) {
+  .logo img {
+    height: 34px;
+  }
+
+  .hero {
+    /* use smaller hero image (create a mobile-specific, cropped version) */
+    background-image: linear-gradient(to right, rgba(15,26,43,0.95), rgba(15,26,43,0.85)),
+                      url('image/hero-bg.jpg'); /* <-- optimized mobile image */
+    background-position: center top;
+    background-size: cover;
+    min-height: 72vh; /* slightly shorter on phones */
+  }
+
+  .hero .text h1 {
+    font-size: 1.8rem;
+    line-height: 1.15;
+  }
+  .hero .description {
+    font-size: 0.95rem;
+  }
+
+  /* make nav items larger for tapping */
+  .nav-links li { padding: 14px 18px; font-size: 1.05rem; }
+
+  /* keep nav-toggle larger tappable target */
+  .nav-toggle {
+    width: 44px;
+    height: 44px;
+    right: 14px;
+    top: 10px;
+  }
+  .nav-toggle span { height: 3.5px; width: 26px; }
+}
+
+/* Hide buttons on small devices */
+@media (max-width: 768px) {
+  .hero-buttons {
+    display: none;
+  }
+}
+
+/* Tablet and smaller (stack buttons) */
+@media (max-width: 768px) {
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;  /* stack vertically */
+    gap: 12px;               /* space between them */
+    align-items: center;
+  }
+
+   .btn,
+   .watch-btn {
+    display: none;
+  }
+}
+
+/* Small phones (adjust size) */
+@media (max-width: 480px) {
+   .btn,
+   .watch-btn {
+    display: none;
+}
+}
